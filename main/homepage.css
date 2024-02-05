@@ -1,0 +1,654 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main container styles */
+main {
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh; */
+}
+
+
+/* Top section styles */
+
+#ptop {
+    background:rgba(0,0,0,0.1) url(https://images.hdqwalls.com/wallpapers/city-lights-moon-vibrant-4k-30.jpg) center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #f6f8fa; 
+  }
+
+#pnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f3dcdc;
+    position: sticky;
+    z-index: 2;
+    
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#pleft {
+    display: flex;
+    align-items: center;
+}
+
+#plogo {
+    height: 70px;
+    width: 150px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+#linksp {
+    display: flex;
+    gap: 20px;
+}
+
+.plink {
+    color: #141414;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.plink:hover {
+    color: #ed0b0b;
+    text-decoration: underline;
+}
+
+#pright {
+    display: flex;
+    align-items: center;
+}
+
+#pmembership,
+#plogin,#singout {
+    padding: 14px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.sign-pout{
+ display: none;
+}
+#pmembership {
+    background-color: #f51111;
+    color: #f7f3f3;
+    margin-right: 10px;
+    font-size: 19px;
+}
+#plogin{
+  color: #0f0f0f;
+  background-color: #cfc9c9;
+}
+#pmembership:hover, #singout:hover {
+    background-color: #333;
+    color: #fff;
+}
+#plogin:hover{
+  background-color: #080808;
+  color: #f3ebeb;
+}
+/* Logout */
+#logout-btnp{
+  font-size: 25px;
+  background-color: #f51111;
+  font-style: italic;
+  border:none;
+  font-weight: 600;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 10px 30px;
+  border-radius: 60px;
+  transition: background-color 0.3s, color 0.3s;
+}
+#logout-btnp:hover{
+  background-color: #000;
+  color: #fff;
+  padding: 11px 31px;
+}
+
+/* search btns */
+.pr{
+  color: #000000;
+  height: 50px;
+  width: 100px;
+  border: 1px solid black;
+}
+
+.pr-btns{
+  height: 50px;
+  width: 300px;
+  display: flex;
+}
+/* Search area styles */
+#psearch {
+    /* flex: 1;
+    display: flex; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #dcd8d8;
+}
+
+#phead {
+    font-size: 70px;
+    color:#fff;
+    margin-top: 20px;
+    
+    /* margin-bottom: 300px; */
+    font-weight: 600;
+    
+}
+
+.swit-para{
+  font-size: 25px;
+  color: #fff;
+  margin-top: 30px;
+}
+.sp-inp{
+   height: 45px;
+   width: 300px;
+   font-size: 20px;
+   font-weight: 600;
+   padding-left: 7%;
+}
+.pregion{
+  height: 52px;
+}
+.all-pr-btns{
+  margin-top: 110px;
+  margin-left: 310px;
+  display: flex;
+  border: 10px solid rgb(27, 16, 65);
+  width: 59%;
+  background-color: #fff;
+
+}
+.sp-filter{
+  height: 55px;
+
+}
+.ps-search{
+  background-color: #f51111;
+  color: #f9f1f1;
+  font-size: 24px;
+  height: 55px;
+  margin-left: -4px;
+}
+/* Footer styles (Bottom) */
+/* #pbuttom {
+    background-color: #333;
+    height: 40px;
+} */
+/* Modal styles */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    
+  
+}
+.moda{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+  
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 500px;
+    width: 500px;
+    transform: translate(-50%, -50%);
+    background-color: #f8f6f6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 8px 19px 4px rgba(237,47,129,0.65);
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .password-container {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  .show-password {
+    position: absolute;
+    top: 50%;
+    /* right: 10px; */
+    margin-left: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+  }
+.hplogin{
+    font-size: 35px;
+    text-decoration: underline;
+    color: rgb(60, 58, 58);
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.lpemail{
+    font-size: 26px;
+}
+#loginForm{
+    margin-top: 55px;
+    margin-left: 20px;
+}
+.pinput{
+    height: 50px;
+    width: 440px;
+    margin-top: 15px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding-left: 15px;
+    font-size: 16px;
+}
+.show-password{
+    margin-top: 30px;
+    margin-right: 110px;
+    color: #141414;
+    font-weight: 500;
+}
+.ploginbtn{
+    height: 50px;
+    width: 455px;
+    border-radius: 10px;
+    background-color: #f51111;
+    color: #f7f3f3;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 21px;
+    transition: background-color 0.4s, color 0.4s, transform 0.4s;
+}
+.ploginbtn:hover{
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    /* transform: scale(1); */
+}
+.ps-reg{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#user-image-pr{
+  color: #000000;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  font-style: normal;
+
+}
+
+#registrationPage {
+    display: none;
+    position: fixed;
+    top: 55%;
+    width: 500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f8f6f6;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: -2px 8px 19px 6px rgba(72,213,242,0.65);
+   
+    /* z-index: 3; */
+  }
+  
+  #registrationPage h2 {
+    color: #100f0f;
+    margin-left: 10px;
+  }
+  #registrationForm{
+    margin-top: 10px;
+  }
+  .reglabel{
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 10px;
+  }
+  .regloginbtn{
+    height: 30px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: #f51111;
+    color: #f7f3f3;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 21px;
+    margin-left: 10px;
+    transition: background-color 0.4s, color 0.4s, transform 0.4s;
+  }
+  .regloginbtn:hover{
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+
+    /* transform: scale(1); */
+}
+  .regInp{
+    width: 400px;
+    margin-left: 10px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    margin-top: 8px;
+  }
+.pregg{
+    margin-top: 20px;
+    margin-left: 5px;
+}
+#createAccountBtn{
+    margin-left: 6px;
+}
+#createAccountBtn:hover{
+    font-style: italic;
+}
+
+/* Cardd=== */
+.p-cardlist {
+    display: flex;
+    /* overflow: hidden; */
+  }
+  #container{
+    margin-bottom: 10px;
+  }
+  .p-card {
+    box-sizing: border-box;
+    height: 290px;
+    width: 180px; 
+    margin: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .p-card:hover{
+    transform: scale(1.1);
+  }
+  #p-pagination{
+    margin-left: 35%;
+    /* margin-bottom: 10px; */
+    padding-top: 40px;
+  }
+  .pagination-btn{
+    margin-left: 10px;
+    height: 40px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #f1eeee;
+    font-size: 16px;
+    background-color: #dcd8d8;
+
+  }
+  .pagination-btn:hover{
+    background-color: #333;
+    color: #fff;
+    border: none;
+    /* transform: scale(1.1); */
+    box-shadow: -3px 2px 16px 3px rgba(0,0,0,0.75);
+  }
+  .p-card img {
+    width: 100%;
+    height: 150px; /* Set your preferred image height */
+    object-fit: cover;
+  }
+  
+  .p-title, .p-address, .p-price {
+    margin: 10px;
+    color: #333;
+  }
+  
+  /* Navigation buttons */
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    transition: color 0.3s ease-in-out;
+  }
+  #container{
+    margin-top: 20px; 
+    margin-left: 160px;
+    height: auto;
+    /* border: 1px solid blue; */
+}
+#pbuttom{
+  /* border: 1px solid red; */
+  margin-top: 15px;
+  
+}
+#p-btm-h{
+    font-size: 40px;
+    font-style: italic;
+    margin-left: 45%;
+    text-decoration: underline;
+    /* margin-top: 20px; */
+   /* border: 1px solid black; */
+}
+  /* Servicess */
+  .iconpng{
+    height: 50px;
+    width: 50px;
+  }
+  .icon-services{
+    display: flex;
+    margin-left: 10%;
+    margin-top: 5%;
+
+  }
+  .icon-details{
+    margin-left: 10%;
+  }
+  .iconpng{
+    height: 40px;
+    width: 40px;
+  }
+  .hpservices{
+    color: #a20606;
+  }
+  .icon-details p{
+    color: #373637;
+  }
+  .all-services{
+    display: flex;
+    margin-top: 3%;
+  }
+  .pool-image{
+    height: 450px;
+    width: 600px;
+    border-radius: 10px;
+  }
+  .head-service{
+    margin-top: 50px;
+    margin-left: 41%;
+    padding-top: 40px;
+  }
+  .para-service{
+    margin-top: 15px;
+    margin-left: 28%;
+  }
+  #services-p{
+    background-color: #e8e6e6;
+    box-shadow: 2px 1px 20px 9px rgba(167,154,154,0.75);
+  }
+  /* Services end */
+
+  .slider-btn-left {
+    left: 10px;
+  }
+  
+  .slider-btn-right {
+    right: 10px;
+  }
+  
+  /* Hover effect for navigation buttons */
+  .slider-btn:hover {
+    color: #007bff;
+  }
+
+  /* Responsivenesss */
+  /* Media Queries for 320-480px */
+
+/* Mobile Portrait */
+@media screen and (max-width: 480px) {
+  body {
+      font-size: 14px;
+  }
+
+  /* main {
+      
+  } */
+
+  #ptop {
+      height: auto;
+  }
+
+  #pnav {
+      padding: 10px;
+  }
+
+  /* #pleft {
+      
+  } */
+
+  #plogo {
+      height: 50px;
+      width: 100px;
+  }
+
+  /* #linksp {
+      
+  } */
+
+  .plink {
+      font-size: 15px;
+  }
+
+  /* #pright {
+     
+  } */
+
+  #pmembership,
+  #plogin,
+  #singout {
+      padding: 10px;
+      font-size: 16px;
+  }
+
+  .pr {
+      height: 40px;
+      width: 80px;
+  }
+
+  /* .pr-btns {
+    
+  }
+
+  #psearch {
+     
+  } */
+
+  #phead {
+      font-size: 50px;
+      /* color: black; */
+      
+  }
+  
+  .swit-para {
+      font-size: 20px;
+  }
+
+  .sp-inp {
+      height: 35px;
+      width: 250px;
+      border: 4px solid rgb(215, 187, 7);
+  }
+
+  .all-pr-btns {
+      margin-top: 90px;
+      margin-left: 10px;
+  }
+
+  .sp-filter {
+      height: 45px;
+  }
+
+  .ps-search {
+      font-size: 20px;
+      height: 45px;
+      border: 3px solid rgb(215, 187, 7);
+      margin-left: -5px;
+  }
+
+  /* Adjust styles for other elements as needed */
+
+  /* Modal styles */
+  .modal-content {
+      height: 400px;
+      width: 300px;
+      /* Adjust other modal styles if needed */
+  }
+
+  /* Adjust styles for login and registration forms */
+
+  /* Card styles */
+  .p-card {
+      height: 240px;
+      width: 140px;
+      margin: 0 5px;
+  }
+
+  .pagination-btn {
+      height: 30px;
+      width: 40px;
+      font-size: 14px;
+  }
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 320px) {
+  /* Adjust styles for an even smaller screen size if needed */
+}

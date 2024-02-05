@@ -1,0 +1,44 @@
+GET http://localhost:3000/posts
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username":"Sree Harsha",
+    "password":"passwo"
+}
+
+### 
+POST http://localhost:3000/hotels
+Content-Type: application/json
+
+  {
+        "name": "ART HOUSE Basel",
+        "address": "Steinenvorstadt 42, Basel, Haute-Savoie, France",
+        "price": 170,
+        "discount": 0.4,
+        "rating": 4.5,
+        "image": "./images/Switzerland/hotels/12.jpg",
+        "region": "Haute-Savoie",
+        "country": "France"
+      }
+### 
+POST https://apicyberfusion.onrender.com/login
+Content-Type: application/json
+ 
+ {
+  "email": "harsha@gmail.com",
+      "password": "password"
+      }
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "prity@gmail.com",
+    "password": "password"
+}
+###
+GET https://apicyberfusion.onrender.com/users/

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="membership_Style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="HotelPage_Style.css">
+</head>
+<body>
+    <!-- Header starts here -->
+    <header>
+        <main>
+            <!-- Top -->
+            <div id="ptop">
+                 <nav id="pnav">
+                    <div id="pleft">
+                        <img src="./assets/final-logo.jpeg" alt="logo" id="plogo" style="height: 40px; "/>
+                        <div id="linksp">
+                            <a href="./index.html" class="plink">Home</a>
+                             <a href="hotelPage.html" class="plink">Book a Hotel</a>
+                            <a href="./membershipPage.html" class="plink">How it works</a>
+                            <a href="about.html" class="plink">About Us</a>
+                            <a href="./contact.html" class="plink">Contact Us</a></div>
+                    </div>
+                      
+                    <div id="pright">
+                        <div><button id="pmembership">Membership</button>
+                            <button id="plogin">Log In</button></div>
+    
+                        <!-- Hidden menu -->
+                        
+                    </div>
+                 </nav>
+            </div>
+            <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeLoginModal()">&times;</span>
+          <h2 class="hplogin">Login to our HotelCard</h2>
+          <form id="loginForm">
+            <label for="email" class="lpemail">E-mail *</label> <br>
+            <input type="email" id="email" name="email" required class="pinput" placeholder="Enter Your Email"> <br> <br> <br>
+      
+            <label for="password" class="lpemail">Password *</label> 
+            <span class="show-password" onclick="togglePassword()">Show</span>
+            <br>
+            <div class="password-container">
+              <input type="password" id="password" name="password" class="pinput" placeholder="Enter Your Password" required>
+            </div>
+      
+            <button type="button" onclick="performLogin()" class="ploginbtn">Login</button><br>
+            <div class="pregg"> <span>Already logIn-</span>
+            <button id="createAccountBtn">Create new account</button>
+            </div>
+           
+          </form>
+        </div>
+        </div>
+    
+    <!-- Registrationn -->
+    <div id="registrationPage" class="hidden">
+        <span class="close" onclick="closeRegForm()">&times;</span>
+        <h2>Create an Account</h2>
+        <form id="registrationForm">
+          <label for="regName" class="reglabel">Name *</label> <br>
+          <input type="text" id="regName" name="regName" required placeholder="Enter Your Name" class="regInp"> <br> <br>
+      
+          <label for="regEmail" class="reglabel">E-mail *</label> <br>
+          <input type="email" id="regEmail" name="regEmail" required placeholder="Enter Your Email" class="regInp"> <br> <br>
+      
+          <label for="regPassword" class="reglabel">Create Password *</label> <br>
+          <input type="password" id="regPassword" name="regPassword" required placeholder="Create Your Password" class="regInp"> <br> <br>
+      
+          <label for="regMobile" class="reglabel">Mobile Number *</label> <br>
+          <input type="tel" id="regMobile" name="regMobile" required placeholder="Enter Your Mobile Number" class="regInp"> <br> <br>
+      
+          <label for="regState" class="reglabel">State *</label> <br>
+          <input type="text" id="regState" name="regState" required placeholder="Enter Your State" class="regInp"> <br> <br> 
+      
+          <label for="regPincode" class="reglabel">Pincode *</label> <br>
+          <input type="text" id="regPincode" name="regPincode" required placeholder="Enter Your Pincode" class="regInp"> <br> <br>
+      
+          <button type="button" onclick="performRegistration()" class="regloginbtn">Register</button>
+        </form>
+      </div>
+        </main>
+    </header>
+    <!-- Header ends here -->
+    <hr>
+
+    <!-- Main Section starts here -->
+    <div class="a-main">
+
+        <!-- Membership cards  Starts here -->
+        <div class="a-membership-cards">
+            <div class="a-member-text">Become a member now</div>
+            <div class="a-mcards">
+                <div class="a-each-card a-leftCard">
+                    <img src="img/card_img_1.jpg" alt="card-img-1" class="a-card-img">
+                    <div class="a-card-text">
+                        <div class="a-card-headline">Trial membership 6 months</div>
+                        <div class="a-card-nextline">
+                            <div class="a-cnextline">
+                                <div class="a-big">CHF 79</div>
+                                <span class="a-small">/ 6 months</span>
+                            </div>
+                             <a href="" id="buy-1"><button class="a-card-buy">Buy</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-each-card a-middleCard">
+                    <img src="img/card_img_2.jpg" alt="card-img-2" class="a-card-img">
+                    <div class="a-card text">
+                        <div class="a-card-headline">Hotelcard</div>
+                        <div class="a-card-nextline">
+                            <div class="a-cnextline">
+                                <div class="a-big">CHF 99</div>
+                                <span class="a-small">/ 1 year</span>
+                            </div>
+                            <a href="" id="buy-2"><button class="a-card-buy">Buy</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-each-card a-rightCard">
+                    <img src="img/card_img_3.avif" alt="card-img-3" class="a-card-img">
+                    <div class="a-card text">
+                        <div class="a-card-headline">Gift card</div>
+                        <div class="a-card-nextline">
+                            <div class="a-cnextline">
+                                <div class="a-big">CHF 99</div>
+                                <span class="a-small">/ valid 12 months</span>
+                            </div>
+                           <a href="" id="buy-3"><button class="a-card-buy">Buy</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Membership cards Ends here -->
+
+
+        <!-- Couple card Starts here -->
+        <div class="a-couple-card">
+            <img src="img/couple_on_beach_img.jpg" alt="a-couple-img" class="a-couple-img">
+            <div class="a-couple-text">
+                <p class="a-CoupleText">Simple. <br> Honest. <br> Win-win for all.</p>
+                <a class="couple-a-link" href="about.html"><button class="a-CoupleButton">Learn More</button></a>
+            </div>
+        </div>
+        <!-- Couple Card Ends here -->
+
+
+        <hr>
+        <!-- Frequently asked questions Section Start here -->
+        <div class="a-asked-questions">
+            <div class="a-asked">Frequently asked questions</div>
+            <div class="a-list">
+                <ul class="a-unorderList">
+                    <li class="list">
+                        <button class="a-list-div" onclick="visiblea()" id="a"><span id="a-PlusSign">+</span>Is HotelCard a subscription?</button>
+                        <div class="a-list-dis" id="aa">Yes, in contrast to other online booking portals, HotelCard is financed exclusively by its members. The annual membership fee is usually amortized after 1-2 nights, after that our members save for every stay</div>
+                    </li>
+                    <li class="list">
+                        <button class="a-list-div" onclick="visibleb()" id="b"><span id="a-PlusSign">+</span>Can the membership be cancelled at any time?</button>
+                        <div class="a-list-dis" id="bb">Yes, the membership can be cancelled at any time up to 14 days before the end of the subscription, otherwise the membership is automatically renewed at CHF 99 per year. We will remind you by e-mail ahead of time about the upcoming automatic renewal of your subscription.</div>
+                    </li>
+                    <li class="list">
+                        <button class="a-list-div" onclick="visiblec()" id="c"><span id="a-PlusSign">+</span>When can I start using HotelCard?</button>
+                        <div class="a-list-dis" id="cc">Directly after registration you will receive a confirmation e-mail and can start booking hotels at member-only conditions immediately. You will find the HotelCard in digital form in your user profile.</div>
+                    </li>
+                    <li class="list">
+                        <button class="a-list-div" onclick="visibled()" id="d"><span id="a-PlusSign">+</span>Can I book as often as I like at member-rates?</button>
+                        <div class="a-list-dis" id="dd">Yes, you may book as many hotel stays as you wish. Our hotels are looking forward to welcoming you! However, only a maximum of 3 consecutive nights per booking are possible with up to 50% discount. After that 10% discount applies (if available)</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Frequently asked questions Section Ends here -->
+    </div>
+    <!-- Main Section ends here -->
+
+    <!-- AnyMore Questions Section Starts here -->
+    <div class="a-more-questions">
+        <div class="a-ask">Do you have anymore questions?</div>
+        <div class="a-contacts">
+            <div >We would also be happy to advice you by telephone or e-mail</div>
+            <div class="a-contacts-details">
+                <div class="a-no">+41(0)800 083 083</div>
+                <div class="a-email">office@hotelcard.com</div>
+            </div>
+        </div>
+    </div>
+    <!-- AnyMore Questions Section Ends here -->
+    
+    <!-- Footer starts here -->
+    <footer>
+        <div class="shbzfooter">
+            <div class="footercontainer">
+                <h3 class="shbzheading3">HotelCard Newsletter: Never miss unbeatable hotel offers</h3>
+                <div class="shbzupperfooter">
+    
+                    <div id="shbzsocial">
+                        <a href="https://www.facebook.com/HotelCardCH/"> <i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/hotelcardch/"> <i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.pinterest.com/hotelcard/?invite_code=0a7a3f030913485bb04fa8442d857402"><i
+                                class="fa-brands fa-pinterest"></i></a>
+    
+                    </div>
+                    <div>
+                        <input type="checkbox" name="termcond" id="terms">
+                        <span id="acceptterms"> I accept the Terms and conditions.</span>
+                    </div>
+                    <div>
+                        <input type="email" name="shbzmail" id="shbzmailid" placeholder="    Email address">
+                    </div>
+                    <div>
+                        <button class="shbzsubscribe">Subscribe
+                            <!-- <i class="fa-brands fa-telegram" style="color: black;"></i> -->
+                        </button>
+                    </div>
+    
+                </div>
+                <hr>
+    
+                <div class="shbzmidfooter">
+                    <div>
+                        <h3 class="shbzheading2">Order HotelCard</h3>
+                        <div class="allList">
+                            <a href="#">Trial membership 6 months</a><a href="#">Personal HotelCard</a><a href="#">HotelCard
+                                as a gift</a><a href="#">Redeem HotelCard voucher</a><a href="#">Renew HotelCard</a>
+                        </div>
+    
+                    </div>
+                    <div>
+                        <h3 class="shbzheading2">Experiences</h3>
+                        <div class="allList">
+                            <a href="#">Wellness hotels and spa</a><a href="#">Boutique hotels</a><a href="#">Hiking
+                                hotels</a><a href="#">Mountain bike hotels</a><a href="#">Motor bike hotels</a><a
+                                href="#">Skiing hotels</a><a href="#">Sledging hotels</a><a href="#">Cross-country ski
+                                hotels</a><a href="#">Mountain hotels</a><a href="#">Waterfront hotels</a><a
+                                href="#">HotelCard Travel tips</a>
+                        </div>
+    
+                    </div>
+                    <div>
+                        <h3 class="shbzheading2">Hotel Offers</h3>
+                        <div class="allList">
+                            <a href="#">Best price guarantee</a><a href="#">Hotels by region</a><a href="#">Hotels in
+                                Davos</a><a href="#">Hotels in Genf</a><a href="#">Hotels in Interlaken</a><a
+                                href="#">Hotels in Lausanne</a><a href="#">Hotels in Locarno</a><a href="#">Hotels in
+                                Lugano</a><a href="#">Hotels in Luzern</a><a href="#">Hotels in Saas-Fee</a><a
+                                href="#">Hotels in Zermatt</a><a href="#">Hotels in Zürich</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="shbzheading2">About HotelCard</h3>
+                        <div class="allList">
+                            <a href="#">About HotelCard</a><a href="#">How it works</a><a href="#">What our members
+                                say</a><a href="#">Reviews</a><a href="#">Frequently asked questions</a><a
+                                href="#">Contact</a><a href="#">Terms of service</a><a href="#">Data protection</a><a
+                                href="#">Withdrawal</a><a href="#">Cookie settings</a><a href="#">Imprint</a><a
+                                href="">Social responsibility</a><a href="#">Media</a><a href="#">Jobs</a><a
+                                href="#">Sitemap</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="shbzheading2">Partner Hotels</h3>
+                        <div class="allList">
+                            <a href="#">Become our partner hotel</a><a href="#">Manage your hotel</a>
+                        </div>
+                        <div class="rest">
+                            <h4 class="shbzheading4">Language</h4>
+                            <select name="Language" id="shbzlang">
+                                <option value="1">English</option>
+                                <option value="2">Deutsh</option>
+                                <option value="3">Italiano</option>
+                            </select>
+                            <h4 class="shbzheading4">Currency</h4>
+                            <select name="Currency" id="shbzcurr">
+                                <option value="1">CHF</option>
+                                <option value="2">Euro</option>
+                            </select>
+                            <h4 class="shbzheading4">HotelCard mobile app</h4>
+                            <a href="https://apps.apple.com/ch/app/hotelcard/id1552189409"><img src="apple.png"
+                                    alt="applestore"></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.hotelcard.app"><img
+                                    style="margin-top: 15px;" src="googleplay.png" alt="googleplay"></a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="shbzdownfooter">
+                    <p class="shbzheading5">Switzerland Tourism.</p>
+                    <h4 class="shbzheading4">© 2023 HotelCard AG</h4>
+                </div>
+                
+    
+            </div>
+            
+        </div>
+    </footer>
+    <!-- Footer ends here -->
+    <script src="membership_script.js"></script>
+    <!-- <script src="homepage.js"></script> -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+</body>
+</html>

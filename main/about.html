@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="stylesheet" href="about.css" />
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- font awer some -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./footer.css" />
+    <link rel="stylesheet" href="HotelPage_Style.css">
+  </head>
+  <body>
+    <!-- navbar -->
+
+    <main>
+      <!-- Top -->
+      <div id="ptop">
+        <nav id="pnav">
+          <div id="pleft">
+            <img src="./assets/final-logo.jpeg" alt="logo" id="plogo" style="height: 40px; "/>
+            <div id="linksp">
+              <a href="./index.html" class="plink">Home</a>
+              <a href="hotelPage.html" class="plink">Book a Hotel</a>
+              <a href="about.html" class="plink">About Us</a>
+              <a href="./contact.html" class="plink">Contact Us</a>
+              <a href="./bookingpage.html" class="plink" id="booking">Bookings</a>
+              <a href="./membershipPage.html" class="plink">Membership</a>
+            </div>
+          </div>
+
+          <div id="pright">
+            <div>
+              <button id="pmembership">Membership</button>
+              <button id="plogin">Log In</button>
+            </div>
+
+            <!-- Hidden menu -->
+          </div>
+        </nav>
+      </div>
+      <!-- Login Modal -->
+      <div id="loginModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeLoginModal()">&times;</span>
+          <h2 class="hplogin">Login to our HotelCard</h2>
+          <form id="loginForm">
+            <label for="email" class="lpemail">E-mail *</label> <br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="pinput"
+              placeholder="Enter Your Email"
+            />
+            <br />
+            <br />
+            <br />
+
+            <label for="password" class="lpemail">Password *</label>
+            <span class="show-password" onclick="togglePassword()">Show</span>
+            <br />
+            <div class="password-container">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="pinput"
+                placeholder="Enter Your Password"
+                required
+              />
+            </div>
+
+            <button type="button" onclick="performLogin()" class="ploginbtn">
+              Login</button
+            ><br />
+            <div class="pregg"> <span>Don't have an account</span>
+              <a href="#" id="createAccountBtn">Create Account</a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Registrationn -->
+      <div id="registrationPage" class="hidden">
+        <span class="close" onclick="closeRegForm()">&times;</span>
+        <h2>Create an Account</h2>
+        <form id="registrationForm">
+          <label for="regName" class="reglabel">Name *</label> <br />
+          <input
+            type="text"
+            id="regName"
+            name="regName"
+            required
+            placeholder="Enter Your Name"
+            class="regInp"
+          />
+          <br />
+          <br />
+
+          <label for="regEmail" class="reglabel">E-mail *</label> <br />
+          <input
+            type="email"
+            id="regEmail"
+            name="regEmail"
+            required
+            placeholder="Enter Your Email"
+            class="regInp"
+          />
+          <br />
+          <br />
+
+          <label for="regPassword" class="reglabel">Create Password *</label>
+          <br />
+          <input
+            type="password"
+            id="regPassword"
+            name="regPassword"
+            required
+            placeholder="Create Your Password"
+            class="regInp"
+          />
+          <br />
+          <br />
+
+          <label for="regMobile" class="reglabel">Mobile Number *</label>
+          <br />
+          <input
+            type="tel"
+            id="regMobile"
+            name="regMobile"
+            required
+            placeholder="Enter Your Mobile Number"
+            class="regInp"
+          />
+          <br />
+          <br />
+
+          <label for="regState" class="reglabel">State *</label> <br />
+          <input
+            type="text"
+            id="regState"
+            name="regState"
+            required
+            placeholder="Enter Your State"
+            class="regInp"
+          />
+          <br />
+          <br />
+
+          <label for="regPincode" class="reglabel">Pincode *</label> <br />
+          <input
+            type="text"
+            id="regPincode"
+            name="regPincode"
+            required
+            placeholder="Enter Your Pincode"
+            class="regInp"
+          />
+          <br />
+          <br />
+
+          <button
+            type="button"
+            onclick="performRegistration()"
+            class="regloginbtn"
+          >
+            Register
+          </button>
+        </form>
+      </div>
+    </main>
+    <hr>
+
+    <!-- header -->
+    <!-- <header>
+      <a href="#">Home</a>
+      <span>/</span><a href="#" style="color: red">About</a>
+    </header> -->
+    <div class="container-1">
+      <div class="container-1-inr">
+        <h1>About HotelCard</h1>
+        <p>
+          Welcome to HotelCard, your gateway to exceptional discounts at hotels
+          in Switzerland and neighbouring regions.
+        </p>
+        <p>
+          Our company is based in Zurich, Switzerland. We love Switzerland. We
+          love hotels. We love to travel and explore. And we believe in local
+          and sustainable tourism. We would like to encourage you to discover
+          Switzerland with us. Whatever the season, whether it's a city break, a
+          spa weekend or a sports activity.
+        </p>
+        <p>
+          Unlike other providers, HotelCard takes no commission or fees from our
+          valued partner hotels. This approach allows us to support hundreds of
+          family-run hotels, increasing their occupancy rates in the low season.
+          It's a win-win scenario where our valued members benefit from
+          exceptional value and memorable experiences. And above all: get to
+          know and love the beauties of Switzerland.
+        </p>
+
+        <img
+          src="https://admin.hotelcard.com/storage/app/media/uploaded-files/HC_teamevent_23_0026_web.jpg"
+          class="img-fluid"
+          alt="image"
+        />
+
+        <h2 style="font-size: 40px; font-family: sans-serif; margin-top: 20px">
+          What we stand for
+        </h2>
+        <div class="rCardDiv">
+          <div class="card" style="width: 18rem">
+            <p>Local travel and sustainability</p>
+            <i class="fa-solid fa-leaf"></i>
+            <div class="card-body">
+              <p class="card-text">
+                eco HotelCard stands for sustainable local travel and promotes
+                local &and; independent hotels. As part of Switzerland Tourism's
+              </p>
+              <p>
+                #Swisstainable programme, we contribute to a more sustainable
+                Swiss tourism.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <p>Fascinating places and experiences</p>
+            <i class="fa-solid fa-mountain-sun"></i>
+            <div class="card-body">
+              <p class="card-text">
+                eco HotelCard stands for sustainable local travel and promotes
+                local &and; independent hotels. As part of Switzerland Tourism's
+              </p>
+              <p>
+                #Swisstainable programme, we contribute to a more sustainable
+                Swiss tourism.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <p>Having More travel for less money</p>
+            <i class="fa-solid fa-bag-shopping"></i>
+            <div class="card-body">
+              <p class="card-text">
+                eco HotelCard stands for sustainable local travel and promotes
+                local &and; independent hotels. As part of Switzerland Tourism's
+              </p>
+              <p>
+                #Swisstainable programme, we contribute to a more sustainable
+                Swiss tourism.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- The story behind HotelCard -->
+        <h2 style="font-size: 40px; font-family: sans-serif; margin-top: 20px">
+          The story behind HotelCard
+        </h2>
+        <p>
+          HotelCard's journey began in 2009, right at the kitchen table of a
+          young Swiss entrepreneur. Driven by a desire to increase the occupancy
+          rate of his father-in-law's hotel in the picturesque Engadine Valley,
+          a clever concept was born - the "half-price travel pass for hotels",
+          inspired by the popular Swiss half-price pass for public transport.
+          This innovative idea was eagerly embraced by numerous hotels as
+          partner establishments, and the membership base flourished,
+          experiencing remarkable growth in the years that followed.
+        </p>
+        <p>
+          At the beginning of 2020, the company's leadership changed with the
+          appointment of Twint founder Thierry Kneissler as the new Chairman.
+          The new management made significant investments to implement
+          best-in-class booking technology and slightly adapt the business model
+          to meet the ever-evolving needs of both hotels and members. The
+          efforts have paid off, as the once Swiss insider tip is now more
+          popular than ever with members and hotels alike, and continues to grow
+          in popularity both in Switzerland and in neighbouring countries.
+        </p>
+        <div class="ceoImgDiv">
+          <div class="rCeoimg">
+            <img
+              src="https://hotelcard-files.ams3.cdn.digitaloceanspaces.com/media/about-us/HC_Claudio-Grisch.jpg"
+              class="img-fluid"
+              alt="img1"
+            />
+            <p>Claudio Grisch, CEO</p>
+          </div>
+
+          <div>
+            <img
+              src="https://hotelcard-files.ams3.cdn.digitaloceanspaces.com/media/about-us/HC_Thierry-Kneissler.jpg"
+              class="img-fluid"
+              alt="img2"
+            />
+            <p>Thierry Kneissler, Chairman of the Board</p>
+          </div>
+        </div>
+        <!-- Career opportunities at HotelCard -->
+        <h2 style="font-size: 40px; font-family: sans-serif; margin-top: 20px">
+          Career opportunities at HotelCard
+        </h2>
+        <p>
+          At HotelCard, we love the diversity of Switzerland and its
+          neighbouring regions. We love choucroute, costini and capuns; we can't
+          get enough of imposing mountains and crystal-clear lakes; and we love
+          wandering through medieval towns as much as we love going on culinary
+          expeditions in vibrant metropolises.
+        </p>
+        <p>
+          Are you just as curious, do you have the same relentless sense of
+          adventure and are you looking for a job where you can contribute your
+          own ideas, experience and wide-ranging talents? Join us and you can
+          not only indulge your personal passion for sustainable, local travel,
+          but also make it part of your professional life.
+        </p>
+        <p>
+          We are looking for co-entrepreneurs who are at home in the digital
+          world and motivated to achieve great things as part of a young team.
+        </p>
+        <button id="lastBtn" type="button" class="btn btn-danger">
+          Apply Now
+        </button>
+      </div>
+    </div>
+
+    <!-- footer -->
+
+    <div class="shbzfooter">
+      <div class="footercontainer">
+        <h3 class="shbzheading3">
+          HotelCard Newsletter: Never miss unbeatable hotel offers
+        </h3>
+        <div class="shbzupperfooter">
+          <div id="shbzsocial">
+            <a href="https://www.facebook.com/HotelCardCH/">
+              <i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/hotelcardch/">
+              <i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.pinterest.com/hotelcard/?invite_code=0a7a3f030913485bb04fa8442d857402"
+              ><i class="fa-brands fa-pinterest"></i
+            ></a>
+          </div>
+          <div>
+            <input type="checkbox" name="termcond" id="terms" />
+            <span id="acceptterms"> I accept the Terms and conditions.</span>
+          </div>
+          <div>
+            <input
+              type="email"
+              name="shbzmail"
+              id="shbzmailid"
+              placeholder="    Email address"
+            />
+          </div>
+          <div>
+            <button class="shbzsubscribe">
+              Subscribe
+              <!-- <i class="fa-brands fa-telegram" style="color: black;"></i> -->
+            </button>
+          </div>
+        </div>
+        <hr />
+
+        <div class="shbzmidfooter">
+          <div>
+            <h3 class="shbzheading2">Order HotelCard</h3>
+            <div class="allList">
+              <a href="#">Trial membership 6 months</a
+              ><a href="#">Personal HotelCard</a
+              ><a href="#">HotelCard as a gift</a
+              ><a href="#">Redeem HotelCard voucher</a
+              ><a href="#">Renew HotelCard</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="shbzheading2">Experiences</h3>
+            <div class="allList">
+              <a href="#">Wellness hotels and spa</a
+              ><a href="#">Boutique hotels</a><a href="#">Hiking hotels</a
+              ><a href="#">Mountain bike hotels</a
+              ><a href="#">Motor bike hotels</a><a href="#">Skiing hotels</a
+              ><a href="#">Sledging hotels</a
+              ><a href="#">Cross-country ski hotels</a
+              ><a href="#">Mountain hotels</a><a href="#">Waterfront hotels</a
+              ><a href="#">HotelCard Travel tips</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="shbzheading2">Hotel Offers</h3>
+            <div class="allList">
+              <a href="#">Best price guarantee</a
+              ><a href="#">Hotels by region</a><a href="#">Hotels in Davos</a
+              ><a href="#">Hotels in Genf</a><a href="#">Hotels in Interlaken</a
+              ><a href="#">Hotels in Lausanne</a
+              ><a href="#">Hotels in Locarno</a><a href="#">Hotels in Lugano</a
+              ><a href="#">Hotels in Luzern</a><a href="#">Hotels in Saas-Fee</a
+              ><a href="#">Hotels in Zermatt</a><a href="#">Hotels in Zürich</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="shbzheading2">About HotelCard</h3>
+            <div class="allList">
+              <a href="#">About HotelCard</a><a href="#">How it works</a
+              ><a href="#">What our members say</a><a href="#">Reviews</a
+              ><a href="#">Frequently asked questions</a><a href="#">Contact</a
+              ><a href="#">Terms of service</a><a href="#">Data protection</a
+              ><a href="#">Withdrawal</a><a href="#">Cookie settings</a
+              ><a href="#">Imprint</a><a href="">Social responsibility</a
+              ><a href="#">Media</a><a href="#">Jobs</a><a href="#">Sitemap</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="shbzheading2">Partner Hotels</h3>
+            <div class="allList">
+              <a href="#">Become our partner hotel</a
+              ><a href="#">Manage your hotel</a>
+            </div>
+            <div class="rest">
+              <h4 class="shbzheading4">Language</h4>
+              <select name="Language" id="shbzlang">
+                <option value="1">English</option>
+                <option value="2">Deutsh</option>
+                <option value="3">Italiano</option>
+              </select>
+              <h4 class="shbzheading4">Currency</h4>
+              <select name="Currency" id="shbzcurr">
+                <option value="1">CHF</option>
+                <option value="2">Euro</option>
+              </select>
+              <h4 class="shbzheading4">HotelCard mobile app</h4>
+              <a href="https://apps.apple.com/ch/app/hotelcard/id1552189409"
+                ><img src="./apple.png" alt="applestore"
+              /></a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.hotelcard.app"
+                ><img
+                  style="margin-top: 15px"
+                  src="./googleplay.png"
+                  alt="googleplay"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="shbzdownfooter">
+          <p class="shbzheading5">Switzerland Tourism.</p>
+          <h4 class="shbzheading4">© 2023 HotelCard AG</h4>
+        </div>
+      </div>
+    </div>
+    <script src="./about.js"></script>
+  </body>
+</html>

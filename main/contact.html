@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="./HotelPage_Style.css">
+</head>
+<body>
+    <!-- Nabvar -->
+    <main>
+        <!-- Top -->
+        <div id="ptop">
+          <nav id="pnav">
+            <div id="pleft">
+                <img src="./assets/final-logo.jpeg" alt="logo" id="plogo" style="height: 40px; "/>
+              <div id="linksp">
+                <a href="./index.html" class="plink">Home</a>
+                <a href="hotelPage.html" class="plink">Book a Hotel</a>
+                <a href="about.html" class="plink">About Us</a>
+                <a href="./contact.html" class="plink">Contact Us</a>
+                <a href="./bookingpage.html" class="plink" id="booking">Bookings</a>
+                <a href="./membershipPage.html" class="plink">Membership</a>
+              </div>
+            </div>
+  
+            <div id="pright">
+              <div>
+                <button id="pmembership">Membership</button>
+                <button id="plogin">Log In</button>
+              </div>
+  
+              <!-- Hidden menu -->
+            </div>
+          </nav>
+        </div>
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2 class="hplogin">Login to our HotelCard</h2>
+            <form id="loginForm">
+              <label for="email" class="lpemail">E-mail *</label> <br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="pinput"
+                placeholder="Enter Your Email"
+              />
+              <br />
+              <br />
+              <br />
+  
+              <label for="password" class="lpemail">Password *</label>
+              <span class="show-password" onclick="togglePassword()">Show</span>
+              <br />
+              <div class="password-container">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="pinput"
+                  placeholder="Enter Your Password"
+                  required
+                />
+              </div>
+  
+              <button type="button" onclick="performLogin()" class="ploginbtn">
+                Login</button
+              ><br />
+              <div class="pregg"> <span>Don't have an account</span>
+                <a href="#" id="createAccountBtn">Create Account</a>
+              </div>
+            </form>
+          </div>
+        </div>
+  
+        <!-- Registrationn -->
+        <div id="registrationPage" class="hidden">
+          <span class="close" onclick="closeRegForm()">&times;</span>
+          <h2>Create an Account</h2>
+          <form id="registrationForm">
+            <label for="regName" class="reglabel">Name *</label> <br />
+            <input
+              type="text"
+              id="regName"
+              name="regName"
+              required
+              placeholder="Enter Your Name"
+              class="regInp"
+            />
+            <br />
+            <br />
+  
+            <label for="regEmail" class="reglabel">E-mail *</label> <br />
+            <input
+              type="email"
+              id="regEmail"
+              name="regEmail"
+              required
+              placeholder="Enter Your Email"
+              class="regInp"
+            />
+            <br />
+            <br />
+  
+            <label for="regPassword" class="reglabel">Create Password *</label>
+            <br />
+            <input
+              type="password"
+              id="regPassword"
+              name="regPassword"
+              required
+              placeholder="Create Your Password"
+              class="regInp"
+            />
+            <br />
+            <br />
+  
+            <label for="regMobile" class="reglabel">Mobile Number *</label>
+            <br />
+            <input
+              type="tel"
+              id="regMobile"
+              name="regMobile"
+              required
+              placeholder="Enter Your Mobile Number"
+              class="regInp"
+            />
+            <br />
+            <br />
+  
+            <label for="regState" class="reglabel">State *</label> <br />
+            <input
+              type="text"
+              id="regState"
+              name="regState"
+              required
+              placeholder="Enter Your State"
+              class="regInp"
+            />
+            <br />
+            <br />
+  
+            <label for="regPincode" class="reglabel">Pincode *</label> <br />
+            <input
+              type="text"
+              id="regPincode"
+              name="regPincode"
+              required
+              placeholder="Enter Your Pincode"
+              class="regInp"
+            />
+            <br />
+            <br />
+  
+            <button
+              type="button"
+              onclick="performRegistration()"
+              class="regloginbtn"
+            >
+              Register
+            </button>
+          </form>
+        </div>
+      </main>
+      <hr>
+    <!-- Map -->
+    <div> 
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d96709.76523403982!2d-73.969913!3d40.758062!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258e4a1c884e5%3A0x24fe1071086b36d5!2sThe%20Atrium!5e0!3m2!1sen!2sbd!4v1702471259357!5m2!1sen!2sbd" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-- contact -->
+    <div id="contact-p">
+    <div id="left-contact">
+        <h2>CONTACT INFO</h2>
+        <div id="p-mob">
+            <span class="material-symbols-outlined">
+                call
+                </span>   <span class="mobNump"> 9876543321</span>
+        </div>
+        <div id="p-con-email">
+            <span class="material-symbols-outlined">
+                mail
+                </span>
+                <span class="emailpr">abxd@gmail.com</span>
+        </div>
+        <div id="p-con-loc">
+            <span class="material-symbols-outlined">
+                location_on
+                </span>
+                <span class="locationpr">Location</span>
+        </div>
+        <h2 class="pr-social">SOCIAL MEDIA</h2>
+        <div id="prsocial">
+            <a href="https://www.facebook.com/HotelCardCH/"> <i class="fa-brands fa-facebook" style="color: white;"></i></a>
+            <a href="https://www.instagram.com/hotelcardch/"> <i class="fa-brands fa-instagram" style="color: white;"></i></a>
+            <a href="https://www.pinterest.com/hotelcard/?invite_code=0a7a3f030913485bb04fa8442d857402"><i
+                    class="fa-brands fa-pinterest" style="color: white;"></i></a>
+                    <i class="fa-brands fa-telegram" style="color: white;"></i>
+
+        </div>
+
+
+    </div>
+    <div id="ryt-contact">
+        <h2>SEND YOUR MESSAGE</h2>
+        <input type="text" name="" id="msgname" placeholder="Enter your name">
+        <input type="email" name="" id="msgemail" placeholder="Enter your email"> <br>
+        <textarea name="" id="msgtext" cols="40" rows="10" placeholder="Enter your message here.."></textarea> <br>
+        <button id="msgSendBtn">Send Message</button>
+    </div>
+</div>
+<footer style="height: 20px; color: black;"></footer>
+<script src="./navbar.js"></script>
+<script src="./contact.js"></script>
+</body>
+</html>

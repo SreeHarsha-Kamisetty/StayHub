@@ -1,0 +1,26 @@
+{
+  "name": "cyber-fusion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SreeHarsha-Kamisetty/cyber-fusion.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SreeHarsha-Kamisetty/cyber-fusion/issues"
+  },
+  "homepage": "https://github.com/SreeHarsha-Kamisetty/cyber-fusion#readme",
+  "dependencies": {
+    "json": "^11.0.0",
+    "json-server": "^0.17.4",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.0.2",
+    "server": "^1.0.38"
+  }
+}

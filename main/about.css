@@ -1,0 +1,99 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/*   please don't disturbe with my code */
+
+header{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 50px;
+    background-color: #F5F5F5;
+    align-items: center;
+    padding-left: 50px;
+    
+}
+header>a{
+    text-decoration: none;
+}
+
+.container-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+   
+}
+.container-1-inr{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+p{
+    font-family: sans-serif;
+}
+h2{
+    font-size: 60px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.rCardDiv{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(232, 238, 238);
+    text-align: center;
+    padding-top: 20px;
+}
+.card>p{
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+.card>i{
+    font-size: 50px;
+    color: red;
+}
+.ceoImgDiv{
+    display: flex;
+    gap: 30px;
+}
+#lastBtn{
+    width: 150px;
+    height: 60px;
+    border: none;
+    background-color: #F74D4D;
+    border-radius: 30px;
+}
+#lastBtn:hover{
+    border: 1px solid red;
+    background-color: white;
+    color: red;
+}
+
+@media(max-width:706px){
+    .rCardDiv{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

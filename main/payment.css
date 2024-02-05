@@ -1,0 +1,405 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;1,9..40,300&family=Open+Sans:ital,wght@0,400;0,600;1,500;1,600&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/*   please don't disturbe with my code */
+
+header{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 50px;
+    background-color: #F5F5F5;
+    align-items: center;
+    padding-left: 50px;
+    
+}
+header>a{
+    text-decoration: none;
+}
+.rHeading{
+    text-align: center;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.rHeading>h1{
+    font-size: 35px;
+    font-weight: bolder;
+  
+}
+
+.rContainner1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    height: 750px;
+}
+.rC1inner{
+  width: 80%;
+  height: 750px;
+  /* background-color: aqua; */
+  display: flex;
+  /* justify-content: space-around; */
+  padding: 30px;
+  gap: 20px;
+}
+
+.rCard{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   padding: 30px;
+   align-items: center;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+.rCard h3{
+    align-self: flex-start;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.rImgDiv img{
+    width: 100%;
+    border-radius: 6px;
+}
+.rPdiv{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+.fa-solid {
+    color: rgb(16, 233, 16);
+}
+.rBtn{
+    width: 160px;
+    height: 50px;
+    border: 2px solid rgb(214, 34, 34);
+    border-radius: 15px;
+    background-color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.rBtn:hover{
+    border: none;
+    background-color: #F74D4D;
+    color: white;
+}
+.rCard:hover{
+    transform: scale(1.04);
+    box-shadow: rgba(233, 119, 12, 0.2) 0px 7px 29px 0px;
+}
+.rptaDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    /* background-color:aliceblue ; */
+}
+
+.rptaDiv >P{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.hotelcard-checkbox{
+    width: 100%;
+    height: 400px;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hotelcard-innerDiv{
+    width: 60%;
+    height: 300px;
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+.rCard2{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 30px;
+    /* gap: 40px; */
+    text-align: center;
+    border-radius: 10px;
+}
+.rCard2:hover{
+    box-shadow: rgba(235, 163, 207, 0.76) 0px 7px 29px 0px;
+}
+.chf{
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+.rCard2 :first-child>input{
+    width: 25px;
+    height: 25px;
+}
+.rCard2 :first-child>label{
+    align-self: center;
+}
+.container2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 50px;
+    height: 250px;
+   
+}
+
+.container2 >h2{
+    font-size: 38px;
+}
+.dateDiv{
+    height: 40px;
+    width: 200px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.rcheckboxDiv{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    height: 50px;
+    gap: 60px;
+
+}
+.rcheckbox{
+    /* background-color: rgb(54, 192, 66); */
+    width: 48%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid gray;
+    padding-left: 10px;
+    gap: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.rcheckbox>input{
+   cursor: pointer;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   
+}
+.rcheckbox:hover{
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.delevery-add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+    /* border: 1px solid; */
+    
+}
+.rInvoice{
+    width: 70%;
+    border:  1px solid rgb(19, 19, 19);
+    height: 650px;
+    border-radius: 8px;
+   padding: 20px; 
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   background-color: #e3f2f3;
+   box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.36);
+}
+
+
+
+
+.rOrderDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 550px;
+   
+}
+.rOrderInnDiv{
+    width: 70%;
+    height: 500px;
+    padding: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 8px;
+}
+.giftCardDiv{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+   
+}
+.giftCardDiv>:nth-child(1){
+    width: 300px;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.giftCardDiv>:nth-child(1)>input{
+    width: 90%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+.giftCardDiv>:nth-child(2){
+    width: 300px;
+    height: 50px;
+   
+   
+}
+.giftCardDiv>:nth-child(2)>button{
+    height: 100%;
+    width: 120px;
+    border: 2px solid black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Quantity price div */
+.quantityDiv{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.rQd{
+    gap: 20px;
+}
+.rQd>p{
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.rtotalPrice-D{
+    display: flex;
+    justify-content: space-between;
+}
+.rodrinvBtn{
+    text-align: center;
+    margin-top: 20px;
+}
+.rodrinvBtn>button{
+    width: 160px;
+    height: 60px;
+    font-size: 18px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border: 2px solid ;
+    border-radius: 12px;
+}
+
+
+.social-PaymentDiv{
+    display: flex;
+    gap: 5px;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.social-PaymentDiv>img{
+  width: 30px;
+  height: 30px;
+}
+
+
+
+.rQna{
+    display: flex;
+    justify-content: center;
+}
+.rQnainn{
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+    text-align: center;
+    padding: 30px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.rQnainn>h4{
+    font-size: 30px;
+    font-weight: bold;
+}
+.rBlock-l{
+    margin-top: 30px;
+}
+ul li button{
+    background-color: white;
+    
+    border-radius: 8px;
+    width: 90%;
+    height: auto;
+    border: 1px solid gray;
+    display: flex;
+    
+    justify-content: space-between;
+    background-color:white;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 10px;
+    font-size: large;
+    font-weight: bold;
+}
+.r-Queue{
+    list-style: none;
+}
+.rUl{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.r-Queue-inn{
+    text-align: start;
+    border: 1px solid gray;
+    width: 90%;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 2px;
+}
+.r-Queue>button> p{
+ font-size: 40px;
+ bottom: 15px;
+ color: chartreuse;
+}
+
+
+
+

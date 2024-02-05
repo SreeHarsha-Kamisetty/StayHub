@@ -1,0 +1,637 @@
+*{
+    box-sizing:border-box;
+    list-style: none;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Header Section    Start ----> */
+main {
+    display: flex;
+    height: 12vh;
+    flex-direction: column;
+}
+
+#ptop {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    color: #fff; 
+}
+#pnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    position: relative; /* Needed for z-index to work */
+    z-index: 2;
+}
+
+#pleft {
+    display: flex;
+    align-items: center;
+}
+
+#plogo {
+    height: 70px;
+    width: 150px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+#linksp {
+    display: flex;
+    gap: 20px;
+}
+
+.plink {
+    color: #141414;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.plink:hover {
+    color: #ed0b0b;
+    text-decoration: underline;
+}
+
+#pright {
+    display: flex;
+    align-items: center;
+}
+
+#pmembership,
+#plogin {
+    padding: 14px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#pmembership {
+    background-color: #f51111;
+    color: #f7f3f3;
+    margin-right: 10px;
+    font-size: 19px;
+}
+
+#pmembership:hover,
+#plogin:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* Footer styles (Bottom) */
+/* #pbuttom {
+    background-color: #333;
+    height: 40px;
+} */
+/* Modal styles */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay background */
+  
+}
+
+  
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 500px;
+    width: 600px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .password-container {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  .show-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+  }
+.hplogin{
+    font-size: 40px;
+    text-decoration: underline;
+    color: rgb(60, 58, 58);
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.lpemail{
+    font-size: 26px;
+}
+#loginForm{
+    margin-top: 55px;
+    margin-left: 20px;
+}
+.pinput{
+    height: 50px;
+    width: 470px;
+    margin-top: 15px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding-left: 15px;
+    font-size: 16px;
+}
+.show-password{
+    margin-top: 30px;
+    margin-right: 110px;
+    color: #141414;
+    font-weight: 500;
+}
+.ploginbtn{
+    height: 50px;
+    width: 488px;
+    border-radius: 10px;
+    background-color: #f51111;
+    color: #f7f3f3;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 21px;
+    transition: background-color 0.4s, color 0.4s, transform 0.4s;
+}
+.ploginbtn:hover{
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    /* transform: scale(1); */
+}
+#registrationPage {
+    display: none;
+    position: fixed;
+    top: 55%;
+    width: 500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f8f6f6;
+    padding: 20px;
+    border-radius: 10px;
+    
+    /* z-index: 3; */
+  }
+  
+  #registrationPage h2 {
+    color: #333;
+  }
+  #registrationForm{
+    margin-top: 15px;
+  }
+  .reglabel{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .regInp{
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    margin-top: 8px;
+  }
+.pregg{
+    margin-top: 15px;
+}
+#createAccountBtn{
+    border: none;
+    border: 1px solid white;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#createAccountBtn:hover{
+    background-color: grey;
+    color: whitesmoke;
+}
+/* Header Section     End   -------> */
+
+
+
+/* Main Section Starts here */
+.a-main{
+    margin: 0%;
+    padding: 2vw;
+    background-color: rgb(188, 184, 206);
+}
+
+
+/* Membership cards Starts here ----> */
+
+.a-membership-cards{
+    display: flex;
+    flex-direction: column;
+}
+.a-member-text{
+    align-items: baseline center;
+    text-align: center;
+    padding: 2vw;
+    font-size: 6vh;
+    font-weight: 600;
+    color: black;
+    text-shadow: 5px 3px 5px rgb(212, 62, 62);
+}
+.a-member-text:hover{
+    text-shadow: 5px 5px 5px rgb(198, 221, 115);
+}
+.a-mcards{
+    display: flex;
+    flex-direction: row;
+}
+.a-each-card{
+    padding: 2.5vh;
+    width: 30%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: rgba(241, 18, 2, 0.3) 0px 19px 38px, rgba(212, 226, 7, 0.22) 0px 15px 12px;
+    /* border: solid rgb(168, 165, 165) 0.2px; */
+}
+.a-each-card:hover{
+    box-shadow: rgba(230, 218, 218, 0.911) 0px 54px 55px, rgba(216, 241, 243, 0.12) 0px -12px 30px, rgba(243, 239, 239, 0.12) 0px 4px 6px, rgba(139, 230, 78, 0.17) 0px 12px 13px, rgba(205, 241, 73, 0.09) 0px -3px 5px;
+}
+.a-leftCard{
+    margin-left: 0%;
+    margin-right:2.5vw;
+}
+.a-middleCard{
+    margin-left:2.5vw;
+    margin-right:2.5vw;
+}
+.a-rightCard{
+    margin-left:2.5vw;
+    margin-right: 0%;
+}
+.a-card-img{
+    height: 35vh;
+    border-radius: 15px;
+}
+.a-card-text{
+    display: flex;
+    flex-direction: column;
+}
+.a-card-headline{
+    font-size: 3.5vh;
+    text-align: start;
+    padding: 1vh;
+}
+.a-card-nextline{
+    display: flex;
+    flex-direction: row;
+}
+.a-cnextline{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+}
+.a-big{
+    font-size: 3vh;
+    padding: 1vh;
+}
+.a-small{
+    padding-top: 2.1vh;
+    font-size:2vh;
+    align-items: baseline;
+}
+
+.a-card-nextline>a{
+    width: 30%;
+}
+.a-card-buy{
+    width: 100%;
+    height: 100%;
+    padding: 1vh;
+    font-size:2vh;
+    border: none;
+    background-color: rgb(194, 189, 189);
+    border-radius: 20px;
+}
+
+.a-card-buy:hover{
+    box-shadow: rgb(38, 57, 77) 0px 15px 20px -10px;
+    color: white;
+    background-color: #ed0b0b;
+}
+
+
+
+/* Membership cards ends here ------> */
+
+
+/* Couple Card Starts here ------> */
+.a-couple-card{
+    margin-top: 12vh;
+    margin-bottom: 12vh;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+}
+.a-couple-card:hover{
+    box-shadow: rgba(230, 218, 218, 0.911) 0px 54px 55px, rgba(216, 241, 243, 0.12) 0px -12px 30px, rgba(243, 239, 239, 0.12) 0px 4px 6px, rgba(139, 230, 78, 0.17) 0px 12px 13px, rgba(205, 241, 73, 0.09) 0px -3px 5px;
+}
+.a-couple-img{
+    width: 80%;
+    border-radius: 20px 0px 0px 20px ;
+}
+.a-couple-text{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(img/card_img_1.jpg);
+    border-radius: 0px 20px 20px 0px ;
+}
+
+.a-CoupleText{
+    padding-left: 2vw;
+    margin-top: 20vh;
+    font-size: 6vh;
+    font-weight: 600;
+    text-align: start;
+    color: white;
+}
+
+.a-couple-text>a{
+    margin-left: 2vw;
+    margin-right: 13vw;
+}
+.a-CoupleButton{
+    width: 100%;
+    padding: 2vh;
+    border-radius: 20px;
+    color: white;
+    background-color: #cf1818;
+    border: none;
+}
+.a-CoupleButton:hover{
+    box-shadow: rgb(38, 57, 77) 0px 15px 20px -10px;
+    color: white;
+    background-color: #f70606;
+}
+/* Couple Card Ends here */
+
+
+/* Frequently asked questions Section Start here */
+.a-asked-questions{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4vh;
+}
+.a-asked{
+    width: 45%;
+    padding: 4vh;
+    padding-top: 20vh;
+    font-size: 8vh;
+    font-weight: 700;
+    color: white;
+    text-shadow: 5px 5px 5px rgb(243, 4, 4);
+}
+.a-list{
+    width: 55%;
+    padding-top: 4vh;
+}
+
+.list{
+    margin-right: 5vh;
+}
+.a-list-div{
+    padding: 1vh;
+    font-size: 3vh;
+    color: black;
+    background-color: rgb(188, 184, 206);
+    font-weight: 500;
+    border: none;
+}
+.a-list-div:hover{
+    color: rgb(8, 24, 245);
+    font-weight: 600;
+    text-shadow: 5px 5px 5px rgb(238, 92, 92);
+
+}
+#a-PlusSign{
+    color: #f70606;
+    padding: 0.5vh;
+    font-size: 3.6vh;
+    font-weight: 600;
+    margin-right: 1vw;
+}
+.a-list-dis{
+    padding: 1vh;
+    height: 9vh;
+    color: black;
+    font-size: 2.1vh;
+}
+#aa, #bb, #cc, #dd{
+    visibility: hidden;
+}
+
+/* Frequently asked questions Section Ends here */
+
+/* Main Section Ends here -----> */
+
+
+
+/* AnyMore Questions Section Starts here */
+.a-more-questions{
+    display: flex;
+    flex-direction: row;
+    color: black;
+}
+.a-ask{
+    width: 50%;
+    padding: 13vh;
+    font-size: 8vh;
+    font-weight: 700;
+    text-shadow: 3px 3px 5px rgb(233, 81, 81);
+}
+
+.a-contacts{
+    width: 50%;
+    font-weight: 548;
+    padding: 10vh;
+    padding-top: 15vh;
+    font-size: 3.1vh;
+    /* text-shadow: 5px 5px 4px rgb(187, 134, 134); */
+    
+}
+.a-contacts-details{
+    display: flex;
+    flex-direction: row;
+    margin: 2vh;
+}
+.a-no{
+    margin-right: 8vh;
+}
+.a-no:hover{
+    color: #f70606;
+    text-shadow: 5px 5px 5px rgb(73, 71, 71);
+}
+.a-email{
+    margin-left: 8vh;
+}
+.a-email:hover{
+    color: #f70606;
+    text-shadow: 5px 5px 5px rgb(73, 71, 71);
+}
+
+/* AnyMore Questions Section Ends here */
+
+
+
+
+/* Reaponsiveness for max-width:768 */
+
+@media screen  and (max-width:768px){
+    /* Main section strats here */
+    .a-main{
+        width: 100%;
+    }
+
+    /* Cards styling Starts---->*/
+    .a-mcards{
+        display: flex;
+        flex-direction: column;
+        margin: 0%;
+    }
+    /* .a-member-text{
+        font-size: 3vh;
+    } */
+    .a-each-card{
+        width: 100%;
+    }
+    .a-leftCard{
+        margin: 0%;
+        margin-bottom: 2vh;
+    }
+    .a-middleCard{
+        margin: 0%;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+    .a-rightCard{
+        margin: 0%;
+        margin-top: 2vh;
+    }
+
+    /* Cards styling Ends ----->*/
+
+    /* Couple card Styling starts------> */
+    .a-couple-card{
+        display: flex;
+        height: 50vh;
+        flex-direction: column;
+        border-radius: 15px 15px 15px 15px ;
+    }
+    .a-couple-img{
+        width: 100%;
+        height: 70%;
+        border-radius: 15px 15px 0px 0px;
+    }
+    .a-couple-text{
+        width: 100%;
+        height: 50%;
+        border-radius: 0px 0px 15px 15px;
+    }
+    .a-CoupleText{
+        font-size: 40px;
+        margin: 0%;
+        padding-top: 1% ;
+    }
+    .couple-a-link{
+        width: 30%;
+    }
+     /* Couple card Styling ends------> */
+
+    /* Frequently asked questions starts here ----> */
+    .a-asked-questions{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .a-asked{
+        width: 100%;
+        font-size: 6vw;
+        margin-top: 0%;
+        padding-top: 8vh;
+        margin-bottom: 0%;
+        padding-bottom: 3vh;
+    }
+    .a-list{
+        width: 100%;
+    }
+    .a-list-dis{
+        width: 100%;
+        height: 13vh;
+    }
+    .a-list-div{
+        font-size: 2.5vh;
+        width: 100%;
+    }
+    /* Frequently asked questions ends here ---> */
+
+    /* Main section ends here */
+
+    /* Anymore questions styling starts here-----> */
+    .a-more-questions{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .a-ask{
+        width: 100%;
+        padding: 8vh;
+        font-size: 6vw;
+    }
+    .a-contacts{
+        display: flex;
+        flex-direction: column;
+        margin: 0%;
+        padding:0%;
+        padding-left: 1.5vw;
+        padding-right: 1.5vw;
+        width: 100%;
+    }
+    .a-contacts-details{
+        display: flex;
+        flex-direction: column;
+    }
+    .a-no{
+        margin-right: 0%;
+        padding: 1vh;
+    }
+    .a-email{
+        margin-left: 0%;
+        padding: 1vh;
+    }
+    /* Anymore questions styling ends here */
+}

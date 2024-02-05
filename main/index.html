@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StayHub</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./homepage.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&family=Pixelify+Sans&family=Plus+Jakarta+Sans&family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <!-- Top -->
+      <div id="ptop">
+        <nav id="pnav">
+          <div id="pleft">
+            <img src="./assets/final-logo.jpeg" alt="logo" id="plogo" style="height: 40px; "/>
+
+            <div id="linksp">
+              <a href="./index.html" class="plink">Home</a>
+              <a href="./hotelPage.html" class="plink">Book a Hotel</a>
+
+              <a href="./about.html" class="plink">About Us</a>
+
+              <a href="./contact.html" class="plink">Contact Us</a>
+
+              <a href="" id="booking" class="plink">Bookings</a>
+              <a href="./membershipPage.html" class="plink">Membership</a>
+            </div>
+
+            <!-- <div id="pright">
+                    <div><a href="./membershipPage.html"><button id="pmembership">Membership</button></a> 
+                        <button id="plogin">Log In</button>   <button id="signout" class="sign-pout">Log Out</button></div>
+            </div> -->
+          </div>
+
+          <div id="pright">
+            <div>
+              <a href="./membershipPage.html"
+                ><button id="pmembership">Membership</button></a
+              >
+              <button id="plogin">Log In</button>
+            </div>
+
+          </div>
+        </nav>
+        <!-- search are -->
+        <div id="psearch">
+          <h1 id="phead">
+            The best hotel deals in <br />
+            Switzerland
+          </h1>
+          <p class="swit-para">
+            Discover your new favourite stay. Find deals for any season,from
+            cozy bed breakfasts to <br />
+            luxury hotels, and book with flexibility and convenience.
+          </p>
+        </div>
+        <div class="all-pr-btns">
+          <select type="text" class="sp-inp sp-filter" id="select-reg">
+            <option value="">Select Region</option>
+            <option value="Zurich">Zurich</option>
+            <option value="Basel">Basel</option>
+            <option value="Argau">Argau</option>
+            <option value="Bern">Bern</option>
+            <option value="Haute-Savoi">Haute-Savoi</option>
+          </select>
+          <input
+            type="date"
+            class="sp-inp pregion"
+            placeholder="Enter Date"
+            required
+          />
+          <a href="./hotelPage.html"
+            ><button class="sp-inp ps-search" id="reg-serach">Search</button></a
+          >
+        </div>
+      </div>
+      <!-- Login Modal -->
+      <div id="loginModal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="loginclick" onclick="closeLoginModal()">&times;</span>
+          <h2 class="hplogin">Login to our HotelCard</h2>
+          <form id="loginForm">
+            <label for="email" class="lpemail">E-mail *</label> <br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="pinput"
+              placeholder="Enter Your Email"
+            />
+            <br />
+            <br />
+            <br />
+
+            <label for="password" class="lpemail">Password *</label>
+            <span class="show-password" onclick="togglePassword()">Show</span>
+            <br />
+            <div class="password-container">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="pinput"
+                placeholder="Enter Your Password"
+              />
+            </div>
+
+            <button
+              type="button"
+              onclick="performLogin()"
+              class="ploginbtn"
+              id="prlogin-btn"
+            >
+              Login</button
+            ><br />
+            <div class="pregg">
+              <span>Don't have an account</span>
+              <a href="#" id="createAccountBtn">Create Account</a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Registrationn -->
+      <div id="registrationPage" class="hidden">
+        <span class="close" onclick="closeRegForm()">&times;</span>
+        <h2>Create an Account</h2>
+        <form id="registrationForm">
+          <label for="regName" class="reglabel">Name *</label> <br />
+          <input
+            type="text"
+            id="regName"
+            name="regName"
+            required
+            placeholder="Enter Your Name"
+            class="regInp"
+          />
+          <br />
+          <br />
+
+          <label for="regEmail" class="reglabel">E-mail *</label> <br />
+          <input
+            type="email"
+            id="regEmail"
+            name="regEmail"
+            required
+            placeholder="Enter Your Email"
+            class="regInp"
+          />
+          <br />
+          <br />
+
+          <label for="regPassword" class="reglabel">Create Password *</label>
+          <br />
+          <input
+            type="password"
+            id="regPassword"
+            name="regPassword"
+            required
+            placeholder="Create Your Password"
+            class="regInp"
+          />
+          <br />
+          <br />
+
+          <label for="regMobile" class="reglabel">Mobile Number *</label> <br />
+          <input
+            type="tel"
+            id="regMobile"
+            name="regMobile"
+            required
+            placeholder="Enter Your Mobile Number"
+            class="regInp"
+          />
+          <br />
+          <br />
+
+          <label for="regState" class="reglabel">State *</label> <br />
+          <input
+            type="text"
+            id="regState"
+            name="regState"
+            required
+            placeholder="Enter Your State"
+            class="regInp"
+          />
+          <br />
+          <br />
+
+          <label for="regPincode" class="reglabel">Pincode *</label> <br />
+          <input
+            type="text"
+            id="regPincode"
+            name="regPincode"
+            required
+            placeholder="Enter Your Pincode"
+            class="regInp"
+          />
+          <br />
+          <br />
+
+          <button type="button" class="regloginbtn" id="p-reg-btnn">
+            Register
+          </button>
+        </form>
+      </div>
+
+      <!-- Buttom -->
+      <div id="pbuttom">
+        <div><h2 id="p-btm-h">Top offers</h2></div>
+        <div id="container"></div>
+      </div>
+      <div id="p-pagination"></div>
+    </main>
+
+    <!-- Servicess -->
+    <div id="services-p">
+      <h1 class="head-service">OUR ALL SERVICES</h1>
+      <p class="para-service">
+        Here we list all the facilities we provide to our customer , check and
+        book and enjoy your trip with us Lorem <br />ipsum dolor sit amet,
+        consectetur adipisicing elit.
+      </p>
+
+      <div class="all-services">
+        <div id="left-service">
+          <div class="icon-services">
+            <img src="./assets/swimming.png" alt="" class="iconpng" />
+            <div class="icon-details">
+              <h3 class="hpservices">Swimming Pool</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Adipisci, voluptatum. voluptas.
+              </p>
+            </div>
+          </div>
+
+          <div class="icon-services">
+            <img src="./assets/board-meeting.png" alt="" class="iconpng" />
+            <div class="icon-details">
+              <h3 class="hpservices">Conference Room</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Adipisci, voluptatum. voluptas.
+              </p>
+            </div>
+          </div>
+
+          <div class="icon-services">
+            <img src="./assets/24-hours.png" alt="" class="iconpng" />
+            <div class="icon-details">
+              <h3 class="hpservices">24/7 Facility</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Adipisci, voluptatum. voluptas.
+              </p>
+            </div>
+          </div>
+
+          <div class="icon-services">
+            <img src="./assets/restaurant.png" alt="" class="iconpng" />
+            <div class="icon-details">
+              <h3 class="hpservices">Restaurant and Cafeteria</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Adipisci, voluptatum. voluptas.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="ryt-service">
+          <img src="./assets/pool-hotel.jpg" alt="" class="pool-image" />
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="shbzfooter">
+        <div class="footercontainer">
+          <h3 class="shbzheading3">
+            HotelCard Newsletter: Never miss unbeatable hotel offers
+          </h3>
+          <div class="shbzupperfooter">
+            <div id="shbzsocial">
+              <a href="https://www.facebook.com/HotelCardCH/">
+                <i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com/hotelcardch/">
+                <i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.pinterest.com/hotelcard/?invite_code=0a7a3f030913485bb04fa8442d857402"
+                ><i class="fa-brands fa-pinterest"></i
+              ></a>
+            </div>
+            <div>
+              <input type="checkbox" name="termcond" id="terms" />
+              <span id="acceptterms"> I accept the Terms and conditions.</span>
+            </div>
+            <div>
+              <input
+                type="email"
+                name="shbzmail"
+                id="shbzmailid"
+                placeholder="    Email address"
+              />
+            </div>
+            <div>
+              <button class="shbzsubscribe">
+                Subscribe
+                <!-- <i class="fa-brands fa-telegram" style="color: black;"></i> -->
+              </button>
+            </div>
+          </div>
+          <hr />
+
+          <div class="shbzmidfooter">
+            <div>
+              <h3 class="shbzheading2">Order HotelCard</h3>
+              <div class="allList">
+                <a href="#">Trial membership 6 months</a
+                ><a href="#">Personal HotelCard</a
+                ><a href="#">HotelCard as a gift</a
+                ><a href="#">Redeem HotelCard voucher</a
+                ><a href="#">Renew HotelCard</a>
+              </div>
+            </div>
+            <div>
+              <h3 class="shbzheading2">Experiences</h3>
+              <div class="allList">
+                <a href="#">Wellness hotels and spa</a
+                ><a href="#">Boutique hotels</a><a href="#">Hiking hotels</a
+                ><a href="#">Mountain bike hotels</a
+                ><a href="#">Motor bike hotels</a><a href="#">Skiing hotels</a
+                ><a href="#">Sledging hotels</a
+                ><a href="#">Cross-country ski hotels</a
+                ><a href="#">Mountain hotels</a><a href="#">Waterfront hotels</a
+                ><a href="#">HotelCard Travel tips</a>
+              </div>
+            </div>
+            <div>
+              <h3 class="shbzheading2">Hotel Offers</h3>
+              <div class="allList">
+                <a href="#">Best price guarantee</a
+                ><a href="#">Hotels by region</a><a href="#">Hotels in Davos</a
+                ><a href="#">Hotels in Genf</a
+                ><a href="#">Hotels in Interlaken</a
+                ><a href="#">Hotels in Lausanne</a
+                ><a href="#">Hotels in Locarno</a
+                ><a href="#">Hotels in Lugano</a><a href="#">Hotels in Luzern</a
+                ><a href="#">Hotels in Saas-Fee</a
+                ><a href="#">Hotels in Zermatt</a
+                ><a href="#">Hotels in Zürich</a>
+              </div>
+            </div>
+            <div>
+              <h3 class="shbzheading2">About HotelCard</h3>
+              <div class="allList">
+                <a href="#">About HotelCard</a><a href="#">How it works</a
+                ><a href="#">What our members say</a><a href="#">Reviews</a
+                ><a href="#">Frequently asked questions</a
+                ><a href="#">Contact</a><a href="#">Terms of service</a
+                ><a href="#">Data protection</a><a href="#">Withdrawal</a
+                ><a href="#">Cookie settings</a><a href="#">Imprint</a
+                ><a href="">Social responsibility</a><a href="#">Media</a
+                ><a href="#">Jobs</a><a href="#">Sitemap</a>
+              </div>
+            </div>
+            <div>
+              <h3 class="shbzheading2">Partner Hotels</h3>
+              <div class="allList">
+                <a href="#">Become our partner hotel</a
+                ><a href="#">Manage your hotel</a>
+              </div>
+              <div class="rest">
+                <h4 class="shbzheading4">Language</h4>
+                <select name="Language" id="shbzlang">
+                  <option value="1">English</option>
+                  <option value="2">Deutsh</option>
+                  <option value="3">Italiano</option>
+                </select>
+                <h4 class="shbzheading4">Currency</h4>
+                <select name="Currency" id="shbzcurr">
+                  <option value="1">CHF</option>
+                  <option value="2">Euro</option>
+                </select>
+                <h4 class="shbzheading4">HotelCard mobile app</h4>
+                <a href="https://apps.apple.com/ch/app/hotelcard/id1552189409"
+                  ><img src="apple.png" alt="applestore"
+                /></a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.hotelcard.app"
+                  ><img
+                    style="margin-top: 15px"
+                    src="googleplay.png"
+                    alt="googleplay"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="shbzdownfooter">
+            <p class="shbzheading5">Switzerland Tourism.</p>
+            <h4 class="shbzheading4">© 2023 HotelCard AG</h4>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./homepage.js"></script>
+  </body>
+</html>

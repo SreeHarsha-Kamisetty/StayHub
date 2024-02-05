@@ -1,0 +1,92 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+#contact-p{
+    display: flex;
+    margin-top: 3%;
+    background-color: #ede9e9;
+    background-image: url(https://tse3.mm.bing.net/th?id=OIP.guzw63GtyOyrSoLemw-SHwHaE8&pid=Api&P=0&h=180);
+    box-shadow: 2px 1px 5px 10px rgba(248, 243, 243, 0.75);
+
+}
+#ryt-contact{
+    margin-left: 45%;
+    color: #fff;
+}
+#left-contact{
+  margin-left: 7%;
+  color: #fff;
+}
+#p-mob,#p-con-email,#p-con-loc{
+    display: flex;
+    margin-top: 20%;
+    font-size: 16px;
+    color: #fff;
+}
+.mobNump{
+    color: #fff;
+    margin-left: 13%;
+}
+.material-symbols-outlined{
+    color: #fff;
+    font-size: 18px;
+}
+.emailpr{
+    margin-left: 12%;
+    color: #fff;
+}
+.locationpr{
+    margin-left: 12%;
+    color: #fff;
+}
+.pr-social{
+    margin-top: 30%;
+    color: #fff;
+}
+.prsocial{
+    display: flex;
+    margin-left: 5%;
+    color: #fff;
+}
+.fa-instagram,.fa-pinterest,.fa-telegram{
+margin-left: 10%;
+color: #fff;
+}
+#prsocial i{
+  font-size: 25px;
+  color: #fff;
+}
+#msgname,#msgemail{
+    height: 11%;
+    width: 90%;
+    border-radius: 4px;
+    background-color: #fffefe;
+    color: #fff;
+}
+#msgemail{
+    margin-top: 20px;
+    color: #fff;
+}
+#msgtext{
+    margin-top: 20px;
+    border-radius: 4px;
+    background-color: #fffefe;
+    border-radius: 7px;
+    color: #fff;
+}
+#msgSendBtn{
+margin-top: 20px; 
+padding: 10px 40px;
+border-radius: 40px;
+margin-left: 69px;
+background-color: rgb(238, 52, 52);
+color: #fff;
+font-size: 16px;
+}
+/* Media Query */
+@media screen and (max-width:700px) {
+    #contact-p{
+        display: flex;
+        flex-direction: column;
+    }
+}
